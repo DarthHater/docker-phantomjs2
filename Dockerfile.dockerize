@@ -1,5 +1,5 @@
 FROM rosenhouse/phantomjs2
-MAINTAINER Fabio Rehm "fgrehm@gmail.com"
+MAINTAINER Jeffry Hesse "jeffryxtron@gmail.com"
 
 RUN echo 'deb http://br.archive.ubuntu.com/ubuntu/ trusty multiverse' >> /etc/apt/sources.list \
     && echo 'deb-src http://br.archive.ubuntu.com/ubuntu/ trusty multiverse' >> /etc/apt/sources.list \

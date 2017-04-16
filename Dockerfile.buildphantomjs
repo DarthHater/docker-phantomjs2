@@ -18,7 +18,7 @@ RUN \
     # Downloading src, unzipping & removing zip
 &&  mkdir phantomjs \
 &&  cd phantomjs \
-&&  wget https://github.com/ariya/phantomjs/archive/54a54dc0687a4b93562285d4f632dcafe2c7bf4f.zip -O phantomjs.zip \
+&&  wget https://github.com/ariya/phantomjs/archive/2.1.1.zip -O phantomjs.zip \
 &&  unzip phantomjs.zip \
 &&  rm -rf /phantomjs/phantomjs.zip \
     # Building phantom
@@ -40,5 +40,5 @@ RUN \
 &&  phantomjs -v
 
 CMD \
-    echo "phantomjs binary is located at /phantomjs/phantomjs-2.0.0/bin/phantomjs"\
+    echo "phantomjs binary is located at /phantomjs/phantomjs-2.1.1/bin/phantomjs"\
 &&  echo "just run 'phantomjs' (version `phantomjs -v`)"
