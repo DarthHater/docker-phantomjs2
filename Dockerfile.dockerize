@@ -1,9 +1,11 @@
-FROM rosenhouse/phantomjs2
+FROM darthhater/phantomjs2
 MAINTAINER Jeffry Hesse "jeffryxtron@gmail.com"
 
-RUN echo 'deb http://br.archive.ubuntu.com/ubuntu/ trusty multiverse' >> /etc/apt/sources.list \
-    && echo 'deb-src http://br.archive.ubuntu.com/ubuntu/ trusty multiverse' >> /etc/apt/sources.list \
-    && apt-get update \
+RUN apt-get install -y sudo 
+
+RUN sudo su -c "echo 'deb http://br.archive.ubuntu.com/ubuntu/ trusty multiverse' >> /etc/apt/sources.list" \
+    && sudo su -c "echo 'deb-src http://br.archive.ubuntu.com/ubuntu/ trusty multiverse' >> /etc/apt/sources.list" \
+    && apt-get update --allow-unauthenticated \
     && apt-get install -y \
                        python-pip \
                        curl \
